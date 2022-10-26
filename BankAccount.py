@@ -14,3 +14,9 @@ class BankAccount:
       print(f"Amount withdrawn: ${amount} New balance: ${self.balance}")
     else:
       print("Insufficient funds!")
+
+  def get_balance (self):
+    print(f"Your current account balance is: ${self.balance}")
+    return self.balance
+
+  
