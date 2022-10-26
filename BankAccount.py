@@ -7,3 +7,10 @@ class BankAccount:
   def deposit (self, amount):
     self.balance += amount
     print(f"Amount deposited: ${amount} New balance: ${self.balance}")
+
+  def withdraw (self, amount):
+    if amount <= self.balance:
+      self.balance -= amount
+      print(f"Amount withdrawn: ${amount} New balance: ${self.balance}")
+    else:
+      print("Insufficient funds!")
