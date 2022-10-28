@@ -56,3 +56,13 @@ account3.print_statement()
 account3.deposit(1000)
 account3.withdraw(43)
 account3.print_statement()
+
+# Example code from assignment
+mitchell_account = BankAccount("Mitchell")
+mitchell_account.deposit(400000)
+mitchell_account.print_statement()
+mitchell_account.add_interest()
+mitchell_account.print_statement()
+# Bought Yeezy's
+mitchell_account.withdraw(150)
+mitchell_account.print_statement()
