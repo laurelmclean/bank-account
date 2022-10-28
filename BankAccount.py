@@ -39,7 +39,7 @@ class BankAccount:
     sensitized_account = "xxxx" + self.account_number[4] + \
         self.account_number[5] + \
         self.account_number[6] + self.account_number[7]
-    print(f"{self.name}\nAccount No.: {sensitized_account}\nBalance: ${self.balance}")
+    print(f"{self.name}\nAccount No.: {sensitized_account}\nBalance: ${round(self.balance, 2)}")
 
 # Stretch goal - create list called bank and loop over all accounts to add interest
 bank = []
