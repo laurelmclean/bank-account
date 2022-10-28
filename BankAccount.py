@@ -6,7 +6,7 @@ class BankAccount:
   def __init__(self, full_name):
     self.name = full_name
     # randomly generates 8 digit account number
-    self.account_number = random.randint(00000000, 99999999)
+    self.account_number = str(random.randint(10000000, 99999999))
     # starting balance set to 0
     self.balance = 0
 
@@ -35,7 +35,11 @@ class BankAccount:
 
   # PRINT BALANCE with name, account number, and balance
   def print_statement (self):
-    print(f"{self.name}\nAccount No.: {self.account_number}\nBalance: ${self.balance}")
+    # Sensitize account information to only show last 4 digits
+    sensitized_account = "xxxx" + self.account_number[4] + \
+        self.account_number[5] + \
+        self.account_number[6] + self.account_number[7]
+    print(f"{self.name}\nAccount No.: {sensitized_account}\nBalance: ${self.balance}")
   
 
 # Three bank account examples
