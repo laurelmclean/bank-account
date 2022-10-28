@@ -40,7 +40,12 @@ class BankAccount:
         self.account_number[5] + \
         self.account_number[6] + self.account_number[7]
     print(f"{self.name}\nAccount No.: {sensitized_account}\nBalance: ${self.balance}")
-  
+
+# Stretch goal - create list called bank and loop over all accounts to add interest
+bank = []
+def bank_add_interest (bank):
+  for account in bank:
+    account.add_interest()
 
 # Three bank account examples
 account1 = BankAccount("Laurel McLean")
@@ -61,12 +66,20 @@ account3.deposit(1000)
 account3.withdraw(43)
 account3.print_statement()
 
-# Example code from assignment
-mitchell_account = BankAccount("Mitchell")
-mitchell_account.deposit(400000)
-mitchell_account.print_statement()
-mitchell_account.add_interest()
-mitchell_account.print_statement()
-# Bought Yeezy's
-mitchell_account.withdraw(150)
-mitchell_account.print_statement()
+# Calling add interest stretch goal for all accounts
+bank = [account1, account2, account3]
+bank_add_interest(bank)
+# printing statment again to demonstrate added interest
+account3.print_statement()
+
+# Example from assignment
+# mitchell_account = BankAccount("Mitchell")
+# mitchell_account.deposit(400000)
+# mitchell_account.print_statement()
+# mitchell_account.add_interest()
+# mitchell_account.print_statement()
+# # Bought Yeezy's
+# mitchell_account.withdraw(150)
+# mitchell_account.print_statement()
+
+
